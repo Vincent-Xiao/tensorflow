@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "mnist_with_summaries.py", line 214, in <module>
+    tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 124, in run
+    _sys.exit(main(argv))
+  File "mnist_with_summaries.py", line 187, in main
+    train()
+  File "mnist_with_summaries.py", line 42, in train
+    fake_data=FLAGS.fake_data)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py", line 240, in read_data_sets
+    source_url + TRAIN_IMAGES)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py", line 208, in maybe_download
+    temp_file_name, _ = urlretrieve_with_retry(source_url)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py", line 165, in wrapped_fn
+    return fn(*args, **kwargs)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py", line 190, in urlretrieve_with_retry
+    return urllib.request.urlretrieve(url, filename)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/urllib.py", line 98, in urlretrieve
+    return opener.retrieve(url, filename, reporthook, data)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/urllib.py", line 245, in retrieve
+    fp = self.open(url, data)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/urllib.py", line 213, in open
+    return getattr(self, name)(url)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/urllib.py", line 443, in open_https
+    h.endheaders(data)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/httplib.py", line 1038, in endheaders
+    self._send_output(message_body)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/httplib.py", line 882, in _send_output
+    self.send(msg)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/httplib.py", line 844, in send
+    self.connect()
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/httplib.py", line 1263, in connect
+    server_hostname=server_hostname)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/ssl.py", line 363, in wrap_socket
+    _context=self)
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/ssl.py", line 611, in __init__
+    self.do_handshake()
+  File "/Users/vincent-xiao/anaconda2/lib/python2.7/ssl.py", line 840, in do_handshake
+    self._sslobj.do_handshake()
+IOError: [Errno socket error] [Errno 54] Connection reset by peer
